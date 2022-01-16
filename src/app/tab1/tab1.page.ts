@@ -17,26 +17,29 @@ export class Tab1Page implements OnInit{
   ) {}
 
   ngOnInit(): void {
-    this.getNews();
+    this.getNews('');
   }
 
   public openURL(url: string){
     window.open(url, "_blank");
   }
 
-  private getNews(){
+  private getNews(event){
     this.newsService.getPoliticaNews()
     .subscribe(
       data => {
         this.news = data as Noticia[];
         this.loaded = true;
+        console.log('cenas');
+        if(event !== '')
+          event.target.complete();
       }
     );
   }
 
-  private refresh(){
+  private refresh(event){
     this.loaded = false;
-    this.getNews();
+    this.getNews(event);
   }
 
 }
