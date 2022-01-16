@@ -21,7 +21,7 @@ export class Tab2Page implements OnInit{
       this.getPartidos();
   }
 
-  public openPartido(partidoId: Partido){
+  public openPartido(partidoId: string){
     this.router.navigateByUrl('/partidos/' + partidoId);
   }
 
