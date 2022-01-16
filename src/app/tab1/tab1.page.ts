@@ -21,11 +21,13 @@ export class Tab1Page implements OnInit{
   }
 
   public openURL(url: string){
-    window.open(url, "_blank");
+    window.open(url, '_blank');
   }
 
   public refresh(event){
+    this.news = [];
     this.loaded = false;
+
     this.getNews(event);
   }
 
@@ -35,7 +37,6 @@ export class Tab1Page implements OnInit{
       data => {
         this.news = data as Noticia[];
         this.loaded = true;
-        console.log('cenas');
         if(event !== ''){
           event.target.complete();
         }
