@@ -24,6 +24,11 @@ export class Tab1Page implements OnInit{
     window.open(url, "_blank");
   }
 
+  public refresh(event){
+    this.loaded = false;
+    this.getNews(event);
+  }
+
   private getNews(event){
     this.newsService.getPoliticaNews()
     .subscribe(
@@ -31,15 +36,11 @@ export class Tab1Page implements OnInit{
         this.news = data as Noticia[];
         this.loaded = true;
         console.log('cenas');
-        if(event !== '')
+        if(event !== ''){
           event.target.complete();
+        }
       }
     );
-  }
-
-  private refresh(event){
-    this.loaded = false;
-    this.getNews(event);
   }
 
 }
