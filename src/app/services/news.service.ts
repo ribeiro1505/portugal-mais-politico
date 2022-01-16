@@ -14,4 +14,14 @@ export class NewsService {
     return this.http.get(dataURL);
   }
 
+  public getPartidosInscritos(): Observable<object>{
+    const dataURL = 'https://portugal-news.herokuapp.com/partidos';
+    return this.http.get(dataURL);
+  }
+
+  public getPartido(partidoId: string): Observable<object>{
+    const dataURL = 'https://portugal-news.herokuapp.com/partidos/' + partidoId;
+    return this.http.get(dataURL);
+  }
+
 }

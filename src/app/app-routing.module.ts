@@ -5,6 +5,10 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  {
+    path: 'partidos/:partidoId',
+    loadChildren: () => import('./partido-page/partido-page.module').then(m => m.PartidoPagePageModule)
   }
 ];
 @NgModule({

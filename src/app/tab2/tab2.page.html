@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Partidos
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,29 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
+      <ion-title size="large">Partidos</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+
+  <div *ngFor="let partido of partidos">
+    <ion-card (click)="openPartido(partido.sigla)">
+
+      <ion-row>
+        <ion-col>
+          <ion-card-content>
+            <div class="partido-name">{{partido.name}}</div>
+            <div class="partido-sigla">{{partido.sigla}}</div>
+          </ion-card-content>
+        </ion-col>
+
+        <ion-col size="4">
+          <img class="partido-list-img" src={{partido.imagem}} alt="">
+        </ion-col>
+      </ion-row>
+
+    </ion-card>
+  </div>
+
+
 </ion-content>
