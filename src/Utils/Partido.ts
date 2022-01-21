@@ -1,5 +1,6 @@
 export interface Partido {
   name: string;
   sigla: string;
-  imagem: string;
+  image: string;
+  id: string;
 }

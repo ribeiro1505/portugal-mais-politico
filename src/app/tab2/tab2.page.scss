@@ -1,15 +1,33 @@
 .partido-list-img{
-  object-fit: cover;
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 130px;
 }
 
-.partido-name{
-  font-size: larger;
+.partido-sigla{
+  margin-top: 10px;
+  font-size: large;
   color: white;
   font-weight: bold;
 }
 
-.partido-sigla{
-  font-size: medium;
+.partido-name{
+  font-size: small;
+  color: lightgray;
+}
+
+.partido-card{
+  width: 150px;
+  padding: 10px;
+  text-align: center;
+  align-content: center;
+  margin: auto;
+}
+
+hr {
+  height: 1px;
+  width: 75%;
+  background: lightgray;
+  display: block;
+  opacity: 1;
+  visibility: visible;
 }

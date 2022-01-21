@@ -14,24 +14,21 @@
   </ion-header>
 
 
-  <div *ngFor="let partido of partidos">
-    <ion-card (click)="openPartido(partido.sigla)">
+  <ion-grid style="width: 100%;">
+    <ion-row>
 
-      <ion-row>
-        <ion-col>
-          <ion-card-content>
-            <div class="partido-name">{{partido.name}}</div>
-            <div class="partido-sigla">{{partido.sigla}}</div>
-          </ion-card-content>
-        </ion-col>
+      <ion-col (click)="openPartido(partido.id)" *ngFor="let partido of partidos">
+        <div class="partido-card">
+          <ion-avatar class="partido-list-img">
+            <img src={{partido.image}} alt="">
+          </ion-avatar>
+          <div class="partido-sigla">{{partido.sigla}}</div>
+          <hr style="color: aliceblue;">
+          <div class="partido-name">{{partido.name}}</div>
+        </div>
+      </ion-col>
 
-        <ion-col size="4">
-          <img class="partido-list-img" src={{partido.imagem}} alt="">
-        </ion-col>
-      </ion-row>
-
-    </ion-card>
-  </div>
-
+    </ion-row>
+</ion-grid>
 
 </ion-content>
