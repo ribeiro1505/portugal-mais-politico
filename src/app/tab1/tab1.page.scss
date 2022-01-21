@@ -13,6 +13,17 @@
 
 .new-title{
   font-size: larger;
-  color: white;
   font-weight: bold;
+}
+
+.news-card{
+  width: 400px;
+  max-width: 100% !important;
+  align-content: center;
+  margin: auto;
+}
+
+.container{
+  width: 1300px;
+  max-width: 100% !important;
 }

@@ -18,20 +18,25 @@
   <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
   </ion-refresher>
 
-  <div *ngFor="let noticia of news">
-    <ion-card (click)="openURL(noticia.url)">
 
-      <img *ngIf="noticia.image" class="place-list-img" src={{noticia.image}}/>
+  <ion-grid class="container">
+    <ion-row>
 
-      <ion-card-content>
-        <ion-card-subtitle (click)="openURL(noticia.sourceURL)">
-          {{noticia.source}}
-        </ion-card-subtitle>
+      <ion-col style="padding-top: 20px;" *ngFor="let noticia of news">
+          <ion-card class="news-card" (click)="openURL(noticia.url)">
+            <img *ngIf="noticia.image" class="place-list-img" src={{noticia.image}}/>
 
-        <div class="new-title">{{noticia.title}}</div>
-      </ion-card-content>
+            <ion-card-content>
+              <ion-card-subtitle (click)="openURL(noticia.sourceURL)">
+                {{noticia.source}}
+              </ion-card-subtitle>
 
-    </ion-card>
-    </div>
+              <div class="new-title">{{noticia.title}}</div>
+            </ion-card-content>
+          </ion-card>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
 
 </ion-content>

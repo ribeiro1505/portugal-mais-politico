@@ -14,21 +14,21 @@
   </ion-header>
 
 
-  <ion-grid style="width: 100%;">
+  <ion-grid class="container">
     <ion-row>
 
-      <ion-col (click)="openPartido(partido.id)" *ngFor="let partido of partidos">
-        <div class="partido-card">
+      <ion-col *ngFor="let partido of partidos">
+        <div (click)="openPartido(partido.id)" class="partido-card">
           <ion-avatar class="partido-list-img">
             <img src={{partido.image}} alt="">
           </ion-avatar>
           <div class="partido-sigla">{{partido.sigla}}</div>
-          <hr style="color: aliceblue;">
+          <hr>
           <div class="partido-name">{{partido.name}}</div>
         </div>
       </ion-col>
 
     </ion-row>
-</ion-grid>
+  </ion-grid>
 
 </ion-content>
