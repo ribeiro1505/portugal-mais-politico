@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class Tab2Page implements OnInit{
 
   partidos: Partido[] = [];
+  loaded = false;
 
   constructor(
     private newsService: NewsService,
@@ -30,7 +31,7 @@ export class Tab2Page implements OnInit{
     .subscribe(
       data => {
         this.partidos = data as Partido[];
-        console.log(data);
+        this.loaded = true;
       }
     );
   }
