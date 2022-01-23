@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsService } from '../services/news.service';
 import { Partido } from 'src/Utils/Partido';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tab2',
@@ -30,6 +30,7 @@ export class Tab2Page implements OnInit{
     .subscribe(
       data => {
         this.partidos = data as Partido[];
+        console.log(data);
       }
     );
   }

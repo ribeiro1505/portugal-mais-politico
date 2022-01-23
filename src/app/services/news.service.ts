@@ -20,7 +20,7 @@ export class NewsService {
   }
 
   public getPartido(partidoId: string): Observable<object>{
-    const dataURL = 'https://portugal-news.herokuapp.com/partidos/' + partidoId;
+    const dataURL = 'https://portugal-news.herokuapp.com/partido/' + partidoId;
     return this.http.get(dataURL);
   }
 

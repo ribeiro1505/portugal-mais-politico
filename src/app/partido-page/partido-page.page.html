@@ -1,9 +1,30 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>partido-page</ion-title>
+    <ion-title>{{partido.partidoName}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  {{partidoId}}
+  <ion-grid class="container" *ngIf="loaded">
+
+    <ion-card class="header">
+      <ion-avatar class="partido-img">
+        <img src={{partido.partidoImage}}>
+      </ion-avatar>
+      <h1>{{partido.partidoSigla}}</h1>
+      <hr>
+      <h4>{{partido.partidoName}}</h4>
+    </ion-card>
+
+    <div class="body">
+
+      <h2>Informação Geral</h2>
+      <h4>Descrição</h4>
+
+
+      <h2>Planos</h2>
+
+    </div>
+
+  </ion-grid>
 </ion-content>

@@ -1,0 +1,30 @@
+.container{
+  width: 1300px;
+  max-width: 100% !important;
+}
+
+.partido-img{
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}
+
+.header{
+  text-align: center;
+  align-content: center;
+  padding: 25px;
+}
+
+.body{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+hr {
+  height: 1px;
+  width: 50%;
+  background: lightgray;
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
