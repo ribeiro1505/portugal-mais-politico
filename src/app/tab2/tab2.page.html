@@ -18,13 +18,12 @@
   <ion-grid class="container">
     <ion-row>
 
-      <ion-col *ngFor="let partido of partidos">
+      <ion-col *ngFor="let partido of partidos" style="margin: 10px;">
         <div (click)="openPartido(partido.partidoId)" class="partido-card">
           <ion-avatar class="partido-list-img">
             <img src={{partido.partidoImage}}>
           </ion-avatar>
           <div class="partido-sigla">{{partido.partidoSigla}}</div>
-          <hr>
           <div class="partido-name">{{partido.partidoName}}</div>
         </div>
       </ion-col>
